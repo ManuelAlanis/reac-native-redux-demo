@@ -5,13 +5,14 @@ import { connect } from 'react-redux';
 class SuperheroesList extends Component {
     getSuperheroes() {
         const { superheroes } = this.props;
+
         console.log('superheroes', superheroes);
         const superheroesData = superheroes.map((heroes, key) => 
             <Text key={key}>{heroes.superhero}</Text>);
         return superheroesData;
     }
+
     render() {
-        console.log(this.props);
         return (
             <View>
                 {this.getSuperheroes()}
